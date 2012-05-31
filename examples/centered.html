@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>jquery-footerad</title>
+	
+	<style>
+		#footerad{
+			width: 980px;
+			height: 150px;
+			background: black;
+			color: white;
+			left: 50%;
+			margin-left: -490px;
+			position: fixed;
+			bottom: 0px;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="footerad"></div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery-footerad.js"></script>
+	<script type="text/javascript">
+		$('#footerad').footerad({ frame: [ { interval: 3000, duration: 10000 }, { interval: 3000, duration: 5000 } ], debug: true, loop: true });
+	</script>
+</body>
+</html>
