@@ -3,6 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>jquery-footerad</title>
+
+	<script src="http://eas5.emediate.eu/EAS_tag.1.0.js"></script>
+	<script>
+		EAS_server='http://annonser.dagbladet.no';
+		EAS_init('9999','EASformat=nocontent');
+		var eas_now = new Date();
+		var eas_timestamp = Math.floor(eas_now.valueOf()/1000);
+	</script>
 	
 	<style>
 		#footerad{
@@ -25,7 +33,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" src="../jquery-footerad.js"></script>
 	<script type="text/javascript">
-		$('#footerad').footerad({ cu: 9999, frame: [ { interval: 3000, duration: 10000 }, { interval: 3000, duration: 5000 } ], debug: true, loop: true });
+		$('#footerad').footerad({ cu: 1234, frame: [ { interval: 3000, duration: 10000 }, { interval: 3000, duration: 5000 } ], loop: true });
 	</script>
 </body>
 </html>

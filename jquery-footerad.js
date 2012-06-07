@@ -40,8 +40,12 @@
 				};
 				
 				function show(){
-					$(_element).html('<img src="http://placehold.it/980x150/'+(Math.random()*0xFFFFFF<<0).toString(16)+'/FFFFFF/&text=Annonse+980x150" />');
-					$(_element).animate({ bottom: 0}, opts.speed);
+					if(opts.debug){
+						$(_element).html('<img src="http://placehold.it/980x150/'+(Math.random()*0xFFFFFF<<0).toString(16)+'/FFFFFF/&text=Annonse+980x150" />');
+					} else {
+						$(_element).html('<iframe src="http://annonser.dagbladet.no/eas?cu=' + opts.cu + ';cre=mu;" width="980" height="150" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe>');
+					};
+					$(_element).animate({ bottom: 0 }, opts.speed);
 					timer = setTimeout(hide, opts.frame[i].duration);
 					if(opts.debug)
 						console.log('Vis -> index: ' + i + ' vises: ' + opts.frame[i].duration);
